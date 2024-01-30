@@ -1,6 +1,9 @@
+"use client"
 import { DarkMode } from "@/components/DarkMode";
 import { Button } from "@/components/ui/button";
 import { Cog } from "lucide-react";
+import Lottie from "lottie-react";
+import task from '@/public/task.json'
 import Link from "next/link";
 export default function Home() {
   return (
@@ -10,7 +13,6 @@ export default function Home() {
           <Cog className="h-6 w-6 mr-2 text-red-400 " />
           <div className="mr-2">
 
-          <DarkMode />
           </div>
           My Project Management
         </div>
@@ -18,8 +20,8 @@ export default function Home() {
 ">
           Manage The Projects and Tasks for Each Project
         </h1>
-        <div className="text-3xl md:text-6xl bg-gradient-to-r from-fuchsia-50-60 to-pink-600 text-white px-4 p-2 rounded-md pb-4 w-fit">
-          Lets Manage
+        <div className=" md:text-6xl  px-4 p-2 rounded-md pb-4 w-fit">
+        <Lottie animationData={task} className="w-[400px]" />
         </div>
       </div>
       <Button>
