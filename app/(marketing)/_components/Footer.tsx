@@ -15,7 +15,7 @@ export const Footer = () => {
             Terms of Service
           </Button>
           <Button size="sm" variant="ghost">
-            <Link href="/">Mah Profile</Link>
+            <Link href="https://github.com/Mahtabvariyani">Mah Profile</Link>
           </Button>
         </div>
       </div>
