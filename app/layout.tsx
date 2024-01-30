@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 
-export const fontSans = FontSans({
-  subsets: ["latin"],
+const fontSans = FontSans({
+  subsets: ['latin'],
   variable: "--font-sans",
-});
+})
 
 export const metadata: Metadata = {
   title: "BoardBuddy App",
