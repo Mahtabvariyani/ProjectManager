@@ -3,15 +3,20 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Inter as FontSans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { siteConfig } from "@/config/site";
 
 const fontSans = FontSans({
-  subsets: ['latin'],
+  subsets: ["latin"],
   variable: "--font-sans",
-})
+});
 
 export const metadata: Metadata = {
-  title: "BoardBuddy App",
-  description: "Your ultimate productivity companion for seamless task management, collaborative projects, and streamlined workflows.",
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.title}`,
+  },
+  description: siteConfig.description,
+  icons: [{ url: "/boardbuddy.png", href: "/boardbuddy.png" }],
 };
 
 export default function RootLayout({
